@@ -1,17 +1,73 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Profile
     </ion-title>
   </ion-toolbar>
-</ion-header>
+ </ion-header>
+ 
+ <ion-content>
+  <ion-col>
+    <ion-card class="card" (click)="modifi()">
+      <ion-card-header style="display: flex; justify-content: center; align-items: center;">
+        <ion-card-title 
+       *ngIf="info" style="font-size: medium;">update your info</ion-card-title>
+       <ion-card-title *ngIf="!info" style="font-size: medium;">save your modif</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+   </ion-col>
+   
+   <ion-list *ngIf="!info" >
+    <ion-item class="console-item">
+      <ion-label>Username</ion-label>
+      <ion-input value="John Doe"></ion-input>
+     </ion-item>
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input value="john.doe@example.com"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Password</ion-label>
+      <ion-input value="********" type="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Location</ion-label>
+      <ion-input value="New York, USA"></ion-input>
+    </ion-item>
+    <ion-content>help</ion-content>
+    <ion-content>privecypolicy</ion-content>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  </ion-list>
+<ion-list  *ngIf="info" >
+  <ion-item class="console-item">
+    <ion-label>Username</ion-label>
+    <p>John Doe</p>
+   </ion-item>
+   <ion-item class="console-item">
+    <ion-label>Email</ion-label>
+    <p>john.doe&#64;example.com</p>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
-</ion-content>
+   </ion-item>
+   <ion-item class="console-item">
+    <ion-label>adresse</ion-label>
+    <p>New York, USA</p>
+   </ion-item>
+   <ion-item class="console-item">
+    <ion-label>help</ion-label>
+    <a>www.pluginandgo.com/help</a>
+   </ion-item>
+   <ion-item class="console-item">
+    <ion-label>privacy policy</ion-label>
+    <a>www.pluginandgo.com/policy</a>
+   </ion-item>
+  </ion-list>
+  <ion-col *ngIf="info"  style="display: flex; justify-content: center; align-items: center; ">
+    <ion-card class="card2" href="/" style="width: 50%; margin-left: 15px;">
+      <ion-card-header style="display: flex; justify-content: center; align-items: center; ">
+        <ion-card-title 
+       style="font-size: medium;">logout</ion-card-title>
+      
+      </ion-card-header>
+    </ion-card>
+   </ion-col>
+ </ion-content>

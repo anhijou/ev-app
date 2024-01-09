@@ -1,17 +1,107 @@
-<ion-header [translucent]="true">
+<!-- ev-tab.page.html -->
+
+<ion-header>
+  <!-- Your header content goes here -->
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title> Electric Vehicle </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <!-- Image of an electric car -->
+  <ion-img class="img-car" src="assets/car.png" style="height: 279px"></ion-img>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" style="height: 100%; margin: auto">
+        <!-- First column content goes here -->
+        <ion-card
+          class="card"
+          style="width: 100%; height: 310px; text-align: center"
+        >
+          <ion-img
+            class="img-car"
+            src="assets/batt.png"
+            style="height: 235px"
+          ></ion-img>
+          <ion-row
+            ><ion-col style="color: #bd9de0; padding: 0">30%</ion-col></ion-row
+          >
+          <ion-row>
+            <ion-col style="color: blueviolet">
+              battery percentage
+            </ion-col></ion-row
+          >
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-row>
+          <ion-card class="card3" style="width: 100%; height: 150px">
+            <ion-row style="margin-top: 20px">
+              <ion-col size="3">
+                <!-- <ion-icon size="large" color="primary" name="navigate-circle-outline"></ion-icon> -->
+                <ion-img
+                  class="img-car"
+                  style="height: 50px"
+                  src="assets/temp.png"
+                  alt="Electric Car Image"
+                ></ion-img>
+              </ion-col>
+              <ion-col style="padding: 0">
+                <ion-row>
+                  <ion-col style="color: blueviolet">Temperature</ion-col>
+                  <ion-col style="color: white">20°C°F</ion-col>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+            <p
+              style="
+                color: #bd9de0;
+                font-size: 10px;
+                margin-top: 10px;
+                text-align: center;
+                padding: 8px;
+              "
+            >
+              Real-time temperature information for your car
+            </p>
+          </ion-card>
+        </ion-row>
+        <ion-row>
+          <ion-card class="card3" style="width: 100%; height: 150px">
+            <ion-row style="margin-top: 20px">
+              <ion-col size="3">
+                <!-- <ion-icon size="large" color="primary" name="navigate-circle-outline"></ion-icon> -->
+                <ion-img
+                  class="img-car"
+                  style="height: 50px"
+                  src="assets/wheel.png"
+                  alt="Electric Car Image"
+                ></ion-img>
+              </ion-col>
+              <ion-col style="padding: 0">
+                <ion-row>
+                  <ion-col style="color: blueviolet">Range</ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col style="color: white">30Km</ion-col>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+
+            <p
+              style="
+                color: #bd9de0;
+                font-size: 10px;
+                padding: 8px;
+                text-align: center;
+              "
+            >
+              Keep track of your car's remaining range at a glance
+            </p>
+          </ion-card>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

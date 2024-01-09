@@ -1,0 +1,31 @@
+.card{
+    margin: 0;
+    --background: #13254F;
+  }
+
+  .full-width-image {
+   width: 100%;
+   height: 100%;
+   object-fit: cover; /* This makes the image cover the whole area without distorting its aspect ratio */
+  }
+
+  ion-content {
+    --background: #041A44;
+   }
+
+   
+
+   ion-card {
+    margin: 5px;
+    --background: #13254F;
+   }
+
+   .card-img{
+    border-radius: 20%;
+   }
+   .card2 .card3{
+   }
+   ion-toolbar{
+    --background: #09275f;
+    color: aliceblue;
+   }

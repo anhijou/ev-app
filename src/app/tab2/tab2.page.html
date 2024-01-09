@@ -1,17 +1,31 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      choose you location
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+<ion-content [fullscreen]="true" style="position:relative;">
+  <div class="map-container" style="position:absolute;">
+  <google-map
+    height="800px"
+    width="500px"
+    >
+    </google-map>
+  </div>
+    <div class="overlap-card"  style="position:absolute;bottom: 129px;width: 100%;margin: 10px;">
+      <ion-row class="justify-content-center align-items-center" style="height: 100%;">
+          <ion-card style="height: 154px;  text-align: center;">
+            <ion-card-header style="color: aliceblue;">
+              choose a location
+            </ion-card-header>
+            <ion-card-content style="color: aliceblue;">
+              Our staff will be with you within 15 minutes
+            </ion-card-content>
+            <ion-button style="width: 80%; margin: auto;">confirm</ion-button>
+          </ion-card>
+      </ion-row>
+    </div>
+    
 </ion-content>
